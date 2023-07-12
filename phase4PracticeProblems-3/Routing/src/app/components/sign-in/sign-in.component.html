@@ -1,0 +1,82 @@
+<div class="card w-50 mx-auto mt-4">
+  <h2>Sign Up</h2>
+  <form #a="ngForm" ngForm class="p-4">
+    <div class="form-group">
+      <label for="fullname">Full Name</label>
+      <input
+        class="form-control"
+        placeholder="Fullname"
+        type="text"
+        ngModel
+        name="fullname"
+        required
+        minlength="8"
+        #fname="ngModel"
+      />
+      <div *ngIf="fname.touched && fname.errors">
+        <p *ngIf="fname">Max Length</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fullname">email</label>
+      <input
+        class="form-control"
+        placeholder="email"
+        type="email"
+        ngModel
+        name="email"
+        required
+        #em="ngModel"
+        pattern="[A-Za-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+      />
+      <div *ngIf="em.touched && em.errors">
+        <p *ngIf="em.errors?.['pattern']">Invalid Email</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fullname">Password</label>
+      <input
+        class="form-control"
+        placeholder="Password"
+        type="password"
+        ngModel
+        name="password"
+        #pwd="ngModel"
+        minlength="8"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).*$"
+        required
+      />
+      <div *ngIf="pwd.touched && pwd.errors">
+        <p *ngIf="pwd.errors?.['pattern']">Invalid Password</p>
+        <p *ngIf="pwd">MaxLegth</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fullname">confirm Password</label>
+      <input
+        class="form-control"
+        placeholder="confirm Password"
+        type="password"
+        ngModel
+        name="confirm"
+        #cpwd="ngModel"
+        minlength="8"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).*$"
+        required
+      />
+      <div *ngIf="cpwd.touched && cpwd.errors">
+        <p *ngIf="cpwd.errors?.['pattern']">Invalid Password</p>
+        <p *ngIf="cpwd.errors?.['MaxLegth']">MaxLegth</p>
+        <p *ngIf="cpwd.value !== pwd.value">password not matched</p>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="show(a)"
+      [disabled]="a.invalid"
+    >
+      Sign up
+    </button>
+  </form>
+</div>
