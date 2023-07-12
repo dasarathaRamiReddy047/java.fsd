@@ -1,0 +1,20 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>price (used default currency pipe)</th>
+        <th>category</th>
+        <th>customPipe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of products">
+        <td>{{ i.name }}</td>
+        <td>{{ i.price | currency }}</td>
+        <td>{{ i.category }}</td>
+        <td>{{ i.category | customPipes: '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

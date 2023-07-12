@@ -1,0 +1,22 @@
+<h1>Custom Directives</h1>
+
+<div class="jumbotron">Product App</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td>name</td>
+      <td>price</td>
+      <td>quantity</td>
+      <td>catrgory</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of products">
+      <td>{{ i.name }}</td>
+      <td appCustoms>{{ i.price }}</td>
+      <td>{{ i.quantity }}</td>
+      <td>{{ i.category }}</td>
+    </tr>
+  </tbody>
+</table>

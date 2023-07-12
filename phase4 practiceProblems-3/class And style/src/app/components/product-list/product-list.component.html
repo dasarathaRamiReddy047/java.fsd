@@ -1,0 +1,25 @@
+<p>product-list Component</p>
+
+<button type="button" (click)="show()">Show Image</button>
+
+<img *ngIf="istrue" src="{{ image }}" alt="image" />
+
+<table>
+  <thead>
+    <tr>
+      <th>Product No</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of product">
+      <td>{{ i.id }}</td>
+      <td [style.color]="i.stock ? 'green' : 'blue'">{{ i.name }}</td>
+      <td>{{ i.price }}</td>
+      <td [className]="i.stock ? 'stock' : 'stock1'">{{ i.stock }}</td>
+    </tr>
+  </tbody>
+</table>
+}
