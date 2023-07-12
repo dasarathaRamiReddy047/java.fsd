@@ -1,0 +1,50 @@
+<div>
+  <h1>Form</h1>
+  <div>
+    <form ngForm #form="ngForm">
+      <div ngModelGroup>
+        <label for="name">First Name</label>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="First Name"
+          name="name"
+          formControlName="fname"
+        />
+      </div>
+      <div ngModelGroup>
+        <label for="lastname">Last Name</label>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Last Name"
+          name="lastname"
+          formControlName="lname"
+        />
+      </div>
+      <div ngModelGroup>
+        <label for="email">Email</label>
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Email"
+          name="email"
+          formControlName="mail"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        />
+      </div>
+      <div ngModelGroup>
+        <label for="password">Password</label>
+        <input
+          class="form-control"
+          type="password"
+          placeholder="Password"
+          name="password"
+          formControlName="pwd"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
