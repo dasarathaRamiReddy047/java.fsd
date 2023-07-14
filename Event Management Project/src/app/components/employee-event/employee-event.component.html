@@ -1,0 +1,107 @@
+<div class="jumbotron">
+  <h1 class="display-4">Event Management</h1>
+  <button class="btn btn-primary" (click)="add()">Add</button>
+  <hr />
+</div>
+
+<div id="" class="modal" *ngIf="istrue">
+  <div class="modal-content">
+    <span class="" (click)="close()">&times;</span>
+    <div class="form-container">
+      <h1 class="heading1">Add</h1>
+      <form #login="ngForm" ngForm (submit)="submit()">
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input
+            class="form-control"
+            type="text"
+            name="firstname"
+            [(ngModel)]="fname"
+            placeholder="First Name"
+            required
+            minlength="4"
+            ngModel
+            #username="ngModel"
+          />
+        </div>
+        <div *ngIf="username.touched && username.errors">
+          <p *ngIf="username.errors['required']">Required</p>
+          <p *ngIf="username.errors['minlength']">Min Length is 4</p>
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input
+            class="form-control"
+            type="text"
+            name="lastname"
+            [(ngModel)]="lname"
+            placeholder="Last Name"
+            required
+            minlength="4"
+            ngModel
+            #userlname="ngModel"
+          />
+          <div *ngIf="userlname.touched && userlname.errors">
+            <p *ngIf="userlname.errors['required']">Required</p>
+            <p *ngIf="userlname.errors['minlength']">Min Length is 4</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="Email"
+            required
+            ngModel
+            #useremail="ngModel"
+            pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+          />
+        </div>
+        <div *ngIf="useremail.touched && useremail.errors">
+          <p *ngIf="useremail.errors['required']">Required</p>
+          <p *ngIf="useremail.errors['pattern']">Invalid Pattern</p>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary mt-4"
+          [disabled]="!login.valid"
+        >
+          Add
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4" *ngIf="userdata; else err">
+  <div class="row tableContainer">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of userdata">
+          <td>{{ i.id }}</td>
+          <td>{{ i.first_name }}</td>
+          <td>{{ i.last_name }}</td>
+          <td>{{ i.email }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="view(i.id)">
+              View Details
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #err class="text-info"> Error Fetching Data </ng-template>

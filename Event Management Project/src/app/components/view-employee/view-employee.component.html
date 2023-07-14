@@ -1,0 +1,79 @@
+<div class="container-fuild">
+  <div class="card viewContainer">
+    <div class="card-body">
+      <p>
+        Details of
+        <span>{{ viewData.first_name }}{{ viewData.last_name }}</span>
+      </p>
+      <div class="d-flex flex-row justify-content-between">
+        <p class="heading">Employee Id</p>
+        <p>{{ viewData.id }}</p>
+      </div>
+      <div class="d-flex flex-row justify-content-between">
+        <p class="heading">Employee First Name</p>
+        <p>{{ viewData.first_name }}</p>
+      </div>
+      <div class="d-flex flex-row justify-content-between">
+        <p class="heading">Employee Last Name</p>
+        <p>{{ viewData.last_name }}</p>
+      </div>
+      <div class="d-flex flex-row justify-content-between">
+        <p class="heading">Employee Email</p>
+        <p>{{ viewData.email }}</p>
+      </div>
+      <div>
+        <button type="button" routerLink="/event" class="m-2 btn btn-primary">
+          Employee List
+        </button>
+        <button type="button" class="m-2 btn btn-secondary" (click)="delete()">
+          Delete
+        </button>
+        <button type="button" class="m-2 btn btn-info" (click)="edit()">
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="" class="modal" *ngIf="istrue">
+  <div class="modal-content">
+    <span class="" (click)="close()">&times;</span>
+    <div class="form-container">
+      <h1>Edit details of {{ viewData.first_name }}</h1>
+      <form ngForm (submit)="save()">
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input
+            class="form-control"
+            type="text"
+            name="firstname"
+            [(ngModel)]="fname"
+            placeholder="First Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input
+            class="form-control"
+            type="text"
+            name="lastname"
+            [(ngModel)]="lname"
+            placeholder="Last Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="Email"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Save Changes</button>
+      </form>
+    </div>
+  </div>
+</div>

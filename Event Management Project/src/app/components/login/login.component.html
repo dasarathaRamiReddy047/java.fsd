@@ -1,0 +1,121 @@
+<div class="formCon card">
+  <div class="card-body">
+    <form ngForm class="login form">
+      <div class="m-2">
+        <label class="m-2" for="username">UserName</label>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="UserName"
+          ngModel
+          #user="ngModel"
+          name="username"
+          [(ngModel)]="username"
+          minlength="4"
+          required
+        />
+        <div *ngIf="user.touched && user.errors">
+          <p class="msg" *ngIf="user.errors['required']">
+            UserName is Required
+          </p>
+          <p class="msg" *ngIf="user.errors['minlength']">Min Length 4</p>
+        </div>
+      </div>
+      <div class="m-2">
+        <label class="m-2" for="password">Password</label>
+        <input
+          class="form-control"
+          type="password"
+          placeholder="Password"
+          ngModel
+          #pwd="ngModel"
+          name="password"
+          [(ngModel)]="password"
+          required
+          minlength="4"
+        />
+        <div *ngIf="pwd.touched && pwd.errors">
+          <p class="msg" *ngIf="pwd.errors['required']">Password is Required</p>
+          <p class="msg" *ngIf="pwd.errors['minlength']">Min Length 4</p>
+        </div>
+      </div>
+      <p class="msg" *ngIf="!istruemsg">Enter Correct Details</p>
+      <button type="button" (click)="login()" class="btn btn-primary m-2">
+        Login
+      </button>
+      <button type="button" class="btn btn-primary" (click)="changePassword()">
+        Change Password
+      </button>
+      <br />
+    </form>
+  </div>
+</div>
+
+<div id="myModal" class="modal" *ngIf="ischange">
+  <div class="modal-content">
+    <span (click)="model()" class="close">&times;</span>
+    <div>
+      <p class="text-center">Change Password</p>
+      <form #pwd="ngForm" ngForm class="login form">
+        <div class="m-2">
+          <label class="m-2" for="username">UserName</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="UserName"
+            ngModel
+            #user="ngModel"
+            name="username"
+            [(ngModel)]="changeusername"
+            required
+          />
+          <div *ngIf="user.touched && user.errors">
+            <p class="msg" *ngIf="user.errors['required']">
+              UserName is Required
+            </p>
+            <p class="msg" *ngIf="user.errors['minlength']">Min Length 4</p>
+          </div>
+        </div>
+
+        <div class="m-2" *ngIf="isusercorrect">
+          <label class="m-2" for="password">Password</label>
+          <input
+            class="form-control"
+            type="password"
+            placeholder="Password"
+            ngModel
+            #pwd="ngModel"
+            name="password"
+            [(ngModel)]="changepassword"
+            required
+            minlength="4"
+          />
+          <div *ngIf="pwd.touched && pwd.errors">
+            <p class="msg" *ngIf="pwd.errors['required']">
+              Password is Required
+            </p>
+            <p class="msg" *ngIf="pwd.errors['minlength']">Min Length 4</p>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary m-2"
+            (click)="submit()"
+            [disabled]="!pwd.valid"
+          >
+            change Password
+          </button>
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="userCheck()"
+          *ngIf="!isusercorrect"
+        >
+          check UserName
+        </button>
+
+        <br />
+      </form>
+    </div>
+  </div>
+</div>

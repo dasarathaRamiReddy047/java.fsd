@@ -1,0 +1,27 @@
+<div class="container-fuild">
+  <div class="text-center">
+    <img
+      class="img"
+      src="https://i.ibb.co/ByCnVbS/Screenshot-2023-07-14-104649.png"
+      alt="Screenshot-2023-07-14-104649"
+    />
+    <h1>Admin</h1>
+    <p
+      [innerHTML]="
+        isAuth
+          ? 'You are logged in to your account.'
+          : 'Your account is logged out.'
+      "
+    ></p>
+  </div>
+  <button
+    type="button"
+    class="btn btn-primary m-2"
+    [innerHTML]="isAuth ? 'Logout' : 'Login'"
+    (click)="login()"
+  ></button>
+
+  <button class="btn btn-primary m-2" routerLink="/login">
+    Change Password
+  </button>
+</div>
