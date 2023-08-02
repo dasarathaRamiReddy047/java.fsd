@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Test"
-           tests="3"
+           tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="13.894">
+           time="25.245">
   <properties />
   
   
-            <testcase name="Launch" time="2.274" classname="com.LoginAndRegistrationTest" />
-                <testcase name="testValidRegistration" time="7.776" classname="com.LoginAndRegistrationTest" />
-                <testcase name="testValidLogin" time="3.844" classname="com.LoginAndRegistrationTest" />
+            <testcase name="testValidLogin" time="3.703" classname="com.LoginAndRegistrationTest" />
+                <testcase name="testValidRegistration" time="8.791" classname="com.LoginAndRegistrationTest" />
+                <testcase name="testNewAadharCardApplication" time="10.800" classname="com.LoginAndRegistrationTest" />
+                <testcase name="Launch" time="1.951" classname="com.LoginAndRegistrationTest" />
       
 </testsuite>
