@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="30"
+           failures="0"
+           errors="0"
+           skipped="30"
+           time="0.002">
+  <properties />
+  
+            <testcase name="afterMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterSuite" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeTest" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeSuite" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterTest" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeClass" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="afterClass" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="loginerror" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="AddToCart" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="RegistrationTest" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="loginPage" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="f" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="Search" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="f" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+            <testcase name="launch" time="0.0" classname="com.login.login">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

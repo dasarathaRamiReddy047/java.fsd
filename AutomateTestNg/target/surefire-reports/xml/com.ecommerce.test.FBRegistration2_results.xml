@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="5"
+           failures="1"
+           errors="0"
+           skipped="4"
+           time="0.998">
+  <properties />
+            <testcase name="beforeSuite" time="0.998" classname="com.ecommerce.test.FBRegistration2">
+                <failure type="org.openqa.selenium.SessionNotCreatedException"
+                  message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;BADBOY&apos;, ip: &apos;192.168.0.104&apos;
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, platformName: Windows 11}]}]
+Capabilities {browserName: chrome, platformName: Windows 11}"
+              >
+<![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'BADBOY', ip: '192.168.0.104'
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, platformName: Windows 11}]}]
+Capabilities {browserName: chrome, platformName: Windows 11}
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:549)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:154)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:134)
+  com.ecommerce.test.FBRegistration2.beforeSuite(FBRegistration2.java:82)
+  java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+  java.base/java.lang.reflect.Method.invoke(Method.java:578)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:382)
+  org.testng.SuiteRunner.run(SuiteRunner.java:336)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+  org.testng.TestNG.runSuites(TestNG.java:1114)
+  org.testng.TestNG.run(TestNG.java:1082)
+  org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+  org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+  org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+  org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+  org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+  org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+  org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:4444
+  org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+  org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+  org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+  org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+  org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+  org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+  org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:97)
+  org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+  org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:154)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:134)
+  com.ecommerce.test.FBRegistration2.beforeSuite(FBRegistration2.java:82)
+  java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+  java.base/java.lang.reflect.Method.invoke(Method.java:578)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:382)
+  org.testng.SuiteRunner.run(SuiteRunner.java:336)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+  org.testng.TestNG.runSuites(TestNG.java:1114)
+  org.testng.TestNG.run(TestNG.java:1082)
+  org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+  org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+  org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+  org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+  org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+  org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+  org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:4444
+  org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
+  org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
+  org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
+  org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
+  io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+  io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
+  io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
+  io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+  io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+  io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
+  io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
+  io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
+  io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
+  io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+  io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+  io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+  io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+  io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+  io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+  io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+  java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:4444
+Caused by: java.net.ConnectException: Connection refused: no further information
+  java.base/sun.nio.ch.Net.pollConnect(Native Method)
+  java.base/sun.nio.ch.Net.pollConnectNow(Net.java:673)
+  java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+  io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+  io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+  io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+  io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+  io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+  io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+  io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+  io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+  io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+  java.base/java.lang.Thread.run(Thread.java:1623)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="afterSuite" time="0.0" classname="com.ecommerce.test.FBRegistration2">
+          <skipped />
+    </testcase>
+            <testcase name="testLocalPage" time="0.0" classname="com.ecommerce.test.FBRegistration2">
+          <skipped />
+    </testcase>
+            <testcase name="searchGoogleAndTestTitleText" time="0.0" classname="com.ecommerce.test.FBRegistration2">
+          <skipped />
+    </testcase>
+            <testcase name="f1" time="0.0" classname="com.ecommerce.test.FBRegistration2">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

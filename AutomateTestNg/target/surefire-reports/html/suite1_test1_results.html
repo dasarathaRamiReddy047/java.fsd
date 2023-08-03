@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - Test</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>Test</h1>
+<p>
+  Test duration: 1.000s
+</p>
+
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">com.ecommerce.test.FBRegistration2</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  beforeSuite
+      </td>
+  <td class="duration">
+    0.998s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. <br/>
+Host info: host: &apos;BADBOY&apos;, ip: &apos;192.168.0.104&apos;<br/>
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;<br/>
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;<br/>
+Driver info: org.openqa.selenium.remote.RemoteWebDriver<br/>
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, platformName: Windows 11}]}]<br/>
+Capabilities {browserName: chrome, platformName: Windows 11}</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:549)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:154)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:134)<br />
+              com.ecommerce.test.FBRegistration2.beforeSuite(FBRegistration2.java:82)<br />
+              java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:578)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:382)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1114)<br />
+              org.testng.TestNG.run(TestNG.java:1082)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:4444</a><br />
+        <div class="stackTrace" id="exception-1">
+                      org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)<br />
+                      org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br />
+                      org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br />
+                      org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br />
+                      org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br />
+                      org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br />
+                      org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:97)<br />
+                      org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)<br />
+                      org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)<br />
+                      org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)<br />
+                      org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)<br />
+                      org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)<br />
+                      org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:154)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:134)<br />
+                      com.ecommerce.test.FBRegistration2.beforeSuite(FBRegistration2.java:82)<br />
+                      java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)<br />
+                      java.base/java.lang.reflect.Method.invoke(Method.java:578)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:382)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br />
+                      org.testng.TestNG.runSuites(TestNG.java:1114)<br />
+                      org.testng.TestNG.run(TestNG.java:1082)<br />
+                      org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)<br />
+                      org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)<br />
+                      org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)<br />
+                      org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)<br />
+                  </div>
+              <b>Caused by: </b> <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse">java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:4444</a><br />
+        <div class="stackTrace" id="exception-2">
+                      org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)<br />
+                      org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)<br />
+                      org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)<br />
+                      org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)<br />
+                      io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)<br />
+                      io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)<br />
+                      io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)<br />
+                      io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)<br />
+                      io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)<br />
+                      io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)<br />
+                      io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)<br />
+                      io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)<br />
+                      io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)<br />
+                      io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)<br />
+                      io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)<br />
+                      io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)<br />
+                      io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)<br />
+                      io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)<br />
+                      io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)<br />
+                      io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)<br />
+                      java.base/java.lang.Thread.run(Thread.java:1623)<br />
+                  </div>
+              <b>Caused by: </b> <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse">io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:4444</a><br />
+        <div class="stackTrace" id="exception-3">
+                  </div>
+              <b>Caused by: </b> <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse">java.net.ConnectException: Connection refused: no further information</a><br />
+        <div class="stackTrace" id="exception-4">
+                      java.base/sun.nio.ch.Net.pollConnect(Native Method)<br />
+                      java.base/sun.nio.ch.Net.pollConnectNow(Net.java:673)<br />
+                      java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)<br />
+                      io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)<br />
+                      io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)<br />
+                      io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)<br />
+                      io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)<br />
+                      io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)<br />
+                      io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)<br />
+                      io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)<br />
+                      io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)<br />
+                      io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)<br />
+                      java.base/java.lang.Thread.run(Thread.java:1623)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">com.ecommerce.test.FBRegistration2</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterSuite
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">com.login.login</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterSuite
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeSuite
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+            </table>
+
+
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com.ecommerce.test.FBRegistration2</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  f1
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                       <i>Depends on group(s): </i>
+        <span class="dependency">Account Creation</span>
+        <br />
+                      
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchGoogleAndTestTitleText
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  testLocalPage
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.login.login</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  AddToCart
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  RegistrationTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Search
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  f
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">1, "a"</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  f
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+          <i>Method arguments: </i><span class="arguments">2, "b"</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  launch
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  loginPage
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  loginerror
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+      </table>
+
+  
+</body>
+</html>
