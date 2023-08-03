@@ -1,0 +1,262 @@
+<div class="container">
+  <div class="row">
+    <!---->
+    <div
+      class="card newAadharAcceptContainer con m-4 col-lg-4 col-md-4 col-sm-12"
+    >
+      <div class="card-body">
+        <h1 class="lead">New Aadhar Request</h1>
+        <button class="btn btn-primary" (click)="newApplyCard()">Click</button>
+      </div>
+    </div>
+
+    <!---->
+    <div
+      class="card newAadharAcceptContainer con m-4 col-lg-4 col-md-4 col-sm-12"
+    >
+      <div class="card-body">
+        <h1 class="lead">update Aadhar Request</h1>
+        <button class="btn btn-primary" (click)="updateCard()">Click</button>
+      </div>
+    </div>
+
+    <!---->
+    <div
+      class="card newAadharAcceptContainer con m-4 col-lg-4 col-md-4 col-sm-12"
+    >
+      <div class="card-body">
+        <h1 class="lead">delete Aadhar Request</h1>
+        <button class="btn btn-primary" (click)="deleteCardItem()">
+          Click
+        </button>
+      </div>
+    </div>
+
+    <!---->
+    <div
+      class="card newAadharAcceptContainer con m-4 col-lg-4 col-md-4 col-sm-12"
+    >
+      <div class="card-body">
+        <h1 class="lead">Accepted Aadhar Requests</h1>
+        <button class="btn btn-primary" (click)="acceptedCard()">Click</button>
+      </div>
+    </div>
+
+    <!---->
+    <div
+      class="card newAadharAcceptContainer con m-4 col-lg-4 col-md-4 col-sm-12"
+    >
+      <div class="card-body">
+        <h1 class="lead">Duplicate Aadhar Requests</h1>
+        <button class="btn btn-primary" (click)="duplicateCard()">Click</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- table for accepting new maadhar Card -->
+
+<div class="container" *ngIf="newApplyCardtable">
+  <h1 class="lead">Requests for New Apply mAadhar card</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Dob</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of requestDataList">
+        <td>{{ i.name }}</td>
+        <td>{{ i.dob }}</td>
+        <td>{{ i.gender }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.phone }}</td>
+        <td>{{ i.address }}</td>
+        <td *ngIf="i.accept">accepted</td>
+        <td *ngIf="!i.accept">
+          <button
+            type="button"
+            class="btn btn-primary m-2"
+            (click)="acceptedNewAadharCard(i.id)"
+          >
+            Accept
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-info m-2"
+            (click)="deleteRequest(i.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- table for accepted requests-->
+
+<div class="container" *ngIf="acceptCardtable">
+  <h1 class="lead">Approved Table</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>aadharNo</th>
+        <th>Name</th>
+        <th>Dob</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>issueDate</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of acceptedData">
+        <td>{{ i.aadharNo }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.dob }}</td>
+        <td>{{ i.gender }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.mobile }}</td>
+        <td>{{ i.address }}</td>
+        <td>{{ i.issueDate }}</td>
+        <td>Accepted</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--Update data request-->
+
+<!-- table for accepting new maadhar Card -->
+
+<div class="container" *ngIf="updateCardtable">
+  <h1 class="lead">Requests for Update mAadhar card</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>mAadhar Card</th>
+        <th>Name</th>
+        <th>Dob</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of updatedRequestList">
+        <td>{{ i.aadharNo }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.dob }}</td>
+        <td>{{ i.gender }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.mobile }}</td>
+        <td>{{ i.address }}</td>
+        <td *ngIf="i.isupdated">accepted</td>
+        <td *ngIf="!i.isupdated">
+          <button
+            type="button"
+            class="btn btn-primary m-2"
+            (click)="updatedmAadharCard(i.id)"
+          >
+            Accept
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary m-2"
+            (click)="deleteUpdatedRequest(i.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--delete table-->
+
+<div class="container" *ngIf="deleteCardtable">
+  <h1 class="lead">Requests for Delete mAadhar card</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Dob</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of deleteRequestList">
+        <td>{{ i.name }}</td>
+        <td>{{ i.dob }}</td>
+        <td>{{ i.gender }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.mobile }}</td>
+        <td>{{ i.address }}</td>
+        <td *ngIf="i.accept">accepted</td>
+        <td *ngIf="i.isdeleted">deleted</td>
+        <td *ngIf="!i.isdeleted">
+          <button
+            type="button"
+            class="btn btn-info m-2"
+            (click)="deleteCard(i.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--duplicate-->
+
+<div class="container" *ngIf="duplicateCardItem">
+  <h1 class="lead">Requests for duplicate mAadhar card</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Dob</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ duplicateDataList.name }}</td>
+        <td>{{ duplicateDataList.dob }}</td>
+        <td>{{ duplicateDataList.gender }}</td>
+        <td>{{ duplicateDataList.email }}</td>
+        <td>{{ duplicateDataList.mobile }}</td>
+        <td>{{ duplicateDataList.address }}</td>
+
+        <td *ngIf="isduplicate">accepted</td>
+        <td *ngIf="!isduplicate">
+          <button
+            type="button"
+            class="btn btn-info m-2"
+            (click)="duplicateItem(duplicateDataList.id)"
+          >
+            accept request
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

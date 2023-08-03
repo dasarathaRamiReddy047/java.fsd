@@ -1,0 +1,58 @@
+.nav {
+  height: 30px;
+  margin-left: 90%;
+  border-radius: 40px;
+}
+
+p {
+  font-weight: 600;
+  font-size: 12px;
+  color: gray;
+}
+
+.about h1 {
+  font-size: 20px;
+  padding: 20px;
+}
+.about {
+  background-image: linear-gradient(
+    95.2deg,
+    rgba(173, 252, 234, 1) 26.8%,
+    rgba(192, 229, 246, 1) 64%
+  );
+  width: 100vh;
+}
+
+body {
+  background-image: linear-gradient(
+    to left,
+    #0c006f,
+    #050a6f,
+    #01126f,
+    #00196f,
+    #001e6e,
+    #00206d,
+    #00226c,
+    #00246b,
+    #00246a,
+    #00236a,
+    #002369,
+    #002369
+  );
+  color: #fff;
+}
+
+.con {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(149, 149, 208, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: #fff;
+}
+
+.con p {
+  color: #fff;
+}

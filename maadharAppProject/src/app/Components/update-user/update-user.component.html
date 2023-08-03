@@ -1,0 +1,144 @@
+<div class="containerElement">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="lead text-center m-2">Update mAadhar Card</h1>
+      <button type="button" class="btn btn-primary" (click)="updateData()">
+        update mAadhar
+      </button>
+    </div>
+
+    <!--getting mAadhar details-->
+
+    <div *ngIf="isupdated">
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" (click)="update()">&times;</span>
+          <div>
+            <form>
+              <div>
+                <label for="cardNo">MaadherCard</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter Card Number"
+                  name="cardNo"
+                  [(ngModel)]="getCardNo"
+                />
+              </div>
+              <div>
+                <label for="phoneNo">Phone No</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter Mobile"
+                  name="phoneNo"
+                  [(ngModel)]="getMobile"
+                />
+              </div>
+              <p>{{ getdatamsg }}</p>
+              <button
+                type="submit"
+                class="btn btn-primary m-2"
+                (click)="getupdateDetails()"
+              >
+                submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Update new maadhar details -->
+
+    <div *ngIf="isupdatedata">
+      <div class="form-container">
+        <form
+          class="form"
+          ngModel
+          #UpdatedataForm="ngForm"
+          (submit)="formData()"
+        >
+          <div>
+            <label for="">Name</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter Name"
+              name="name"
+              [(ngModel)]="name"
+              required
+            />
+          </div>
+          <div>
+            <label for="date">Data Of Birth</label>
+            <input
+              class="form-control"
+              type="date"
+              placeholder="date"
+              name="date"
+              [(ngModel)]="dob"
+              required
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              [(ngModel)]="email"
+              required
+            />
+          </div>
+          <div>
+            <label for="address">Address</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter address"
+              name="aadrees"
+              [(ngModel)]="address"
+              required
+            />
+          </div>
+          <div>
+            <label for="phone">Phone No</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter phone"
+              name="phone"
+              [(ngModel)]="phone"
+              required
+            />
+          </div>
+          <div>
+            <label for="gender">Gender</label>
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              [(ngModel)]="gender"
+              value="male"
+            />
+            <label for="male">Male</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              [(ngModel)]="gender"
+              value="female"
+            />
+            <label for="female">Female</label>
+          </div>
+
+          <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

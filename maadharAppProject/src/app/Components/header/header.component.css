@@ -1,0 +1,17 @@
+li a {
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+}
+
+.con {
+  background-color: #1a4189;
+}
+
+.userlogo {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+}

@@ -1,0 +1,13 @@
+h1 {
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.con {
+  transition: transform 0.3s ease;
+}
+
+.con:hover {
+  background-color: skyblue;
+  transform: scale(1.1);
+}

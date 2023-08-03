@@ -1,0 +1,54 @@
+{
+  "newaadhar": [
+    {
+      "name": "Sachin Tendulkar",
+      "dob": "1979-01-01",
+      "email": "Sachin@gmail.com",
+      "address": "1/4623 mumbai, india",
+      "phone": "9876543210",
+      "gender": "male",
+      "accept": true,
+      "id": 1
+    },
+    {
+      "name": "user ",
+      "dob": "1978-01-04",
+      "email": "user@gmail.com",
+      "address": "india",
+      "phone": "7384738397",
+      "gender": "male",
+      "accept": true,
+      "id": 2
+    }
+  ],
+  "updateAadhar": [],
+  "deleteAadhar": [
+    {
+      "id": 2,
+      "name": "user ",
+      "aadharNo": "9471",
+      "dob": "1978-01-04",
+      "email": "user@gmail.com",
+      "mobile": "7384738397",
+      "gender": "male",
+      "address": "india",
+      "status": "active",
+      "issueDate": "3-7-2023",
+      "isdeleted": true
+    }
+  ],
+  "duplicate": [
+    {
+      "id": 1,
+      "name": "Sachin",
+      "aadharNo": "6540",
+      "dob": "1979-01-01",
+      "email": "SachinTendular@gmail.com",
+      "mobile": "9876543210",
+      "gender": "male",
+      "address": "1/4623 mumbai, india",
+      "status": "active",
+      "issueDate": "3-7-2023"
+    }
+  ]
+}

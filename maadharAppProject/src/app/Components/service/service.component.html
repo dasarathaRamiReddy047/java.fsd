@@ -1,0 +1,398 @@
+<div class="containerElements">
+  <!-- new mAadhar Card Apply Form  -->
+
+  <div *ngIf="isApplynew">
+    <div class="form-container">
+      <h1 class="lead text-center">New Aadhar Card Apply</h1>
+      <form class="form" ngModel #data="ngForm" (submit)="formData()">
+        <div>
+          <label for="">Name</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Enter Name"
+            name="name"
+            [(ngModel)]="name"
+            required
+          />
+        </div>
+        <div>
+          <label for="date">Data Of Birth</label>
+          <input
+            class="form-control"
+            type="date"
+            placeholder="date"
+            name="date"
+            [(ngModel)]="dob"
+            required
+          />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            [(ngModel)]="email"
+            required
+          />
+        </div>
+        <div>
+          <label for="address">Address</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Enter address"
+            name="aadrees"
+            [(ngModel)]="address"
+            required
+          />
+        </div>
+        <div>
+          <label for="phone">Phone No</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Enter phone"
+            name="phone"
+            [(ngModel)]="phone"
+            required
+          />
+        </div>
+        <div>
+          <label for="gender">Gender</label>
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            [(ngModel)]="gender"
+            value="male"
+          />
+          <label for="male">Male</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            [(ngModel)]="gender"
+            value="female"
+          />
+          <label for="female">Female</label>
+        </div>
+
+        <div>
+          <button id="submit" type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Service Containers   -->
+  <!--Apply new aadhar-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="lead">services</h1>
+      <div class="row col-12 conAbout">
+        <div class="card con col-lg-3 col-md-12 m-4 shadow">
+          <div class="card-body">
+            <h1 class="lead">Apply new mAadharCard</h1>
+            <p class="lead">
+              From a new born to a senior citizen, everyone can enrol for
+              Aadhaar.
+            </p>
+            <button
+              id="apply"
+              type="button"
+              class="btn bt-info button"
+              (click)="applyNew()"
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+
+        <!--apply duplicate-->
+
+        <div class="card con col-lg-3 col-md-12 m-4 shadow">
+          <div class="card-body">
+            <h1 class="lead">Apply Download mAadhar Card</h1>
+            <p class="lead">DownLoad MaadharCard</p>
+            <button
+              type="button"
+              class="btn bt-info button"
+              (click)="download()"
+            >
+              download
+            </button>
+          </div>
+        </div>
+
+        <!--update-->
+
+        <div class="card con col-lg-3 col-md-12 m-4 shadow">
+          <div class="card-body">
+            <h1 class="lead">Update mAadharCard</h1>
+            <p class="lead">
+              It is essential that your Aadhaar Data is correct and remains
+              updated always.
+            </p>
+            <button
+              type="button"
+              class="btn bt-info button"
+              routerLink="/update"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+
+        <!-- Delete-->
+        <div class="card con col-lg-3 col-md-12 m-4 shadow">
+          <div class="card-body">
+            <h1 class="lead">Delete mAadhar Card</h1>
+            <button
+              type="button"
+              class="btn bt-info button"
+              (click)="deleteCard()"
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+
+        <!--Duplicate -->
+
+        <div class="card con col-lg-3 col-md-12 m-4 shadow">
+          <div class="card-body">
+            <h1 class="lead">Duplicate mAadhar Card</h1>
+            <button
+              type="button"
+              class="btn bt-info button"
+              (click)="duplicateRequest()"
+            >
+              Apply
+            </button>
+            <button
+              type="button"
+              class="btn bt-info button"
+              (click)="showDuplicate()"
+            >
+              Show Duplicate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  download or duplicate  -->
+
+  <div *ngIf="isdownload">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" (click)="download()">&times;</span>
+        <div>
+          <h1 class="lead text-center">Download mAadharCard</h1>
+          <form>
+            <div>
+              <label for="cardNo">MaadherCard</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter Card Number"
+                name="cardNo"
+                [(ngModel)]="getCardNo"
+              />
+            </div>
+            <div>
+              <label for="phoneNo">Phone No</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter Mobile"
+                name="phoneNo"
+                [(ngModel)]="getMobile"
+              />
+            </div>
+            <p>{{ getdatamsg }}</p>
+            <button
+              type="submit"
+              class="btn btn-primary m-2"
+              (click)="sendRequest()"
+            >
+              submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Download maadhar Card-->
+
+  <div class="maadharCard" *ngIf="isAadherCard">
+    <div id="myModal" class="modal">
+      <div class="modal-content modalCon">
+        <span class="close" (click)="duplicate()">&times;</span>
+        <div class="card cardCon">
+          <p class="lead">Maadher</p>
+          <p class="">AadharNumber: {{ downloadData.aadharNo }}</p>
+          <div class="d-flex flex-row">
+            <div class="imgContainer">
+              <img
+                class="imgLogo"
+                src="https://i.ibb.co/jkmwgYX/Screenshot-2023-07-23-011743.png"
+                alt="Screenshot-2023-07-23-011743"
+                border="0"
+              />
+            </div>
+            <div class="d-flex flex-row">
+              <div class="m-2">
+                <p class="details">Name: {{ downloadData.name }}</p>
+                <p class="details">DateOfBirth: {{ downloadData.dob }}</p>
+              </div>
+              <div class="m-2">
+                <p class="text">Address:</p>
+                <p class="details">{{ downloadData.address }}</p>
+              </div>
+            </div>
+          </div>
+          <h1 class="no">{{ downloadData.aadharNo }}</h1>
+          <hr />
+          <div>
+            <p>officeEmail:maadhar@gmail.com</p>
+            <p>PhoneNo:0945984593</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  deletecard  -->
+
+  <div *ngIf="isdeleteData">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" (click)="deleteCon()">&times;</span>
+        <div>
+          <h1 class="lead text-center">Delete mAadharCard</h1>
+          <form>
+            <div>
+              <label for="cardNo">MaadherCard</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter Card Number"
+                name="cardNo"
+                [(ngModel)]="getCardNo"
+              />
+            </div>
+            <div>
+              <label for="phoneNo">Phone No</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter Mobile"
+                name="phoneNo"
+                [(ngModel)]="getMobile"
+              />
+            </div>
+            <p>{{ getdatamsg }}</p>
+            <button
+              type="submit"
+              class="btn btn-primary m-2"
+              (click)="deleteRequest()"
+            >
+              submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Duplicate details-->
+
+<div *ngIf="isduplicate">
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="duplicateClose()">&times;</span>
+      <div>
+        <h1 class="lead text-center">Duplicate mAadharCard</h1>
+        <form>
+          <div>
+            <label for="cardNo">MaadherCard</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter Card Number"
+              name="cardNo"
+              [(ngModel)]="getCardNo"
+            />
+          </div>
+          <div>
+            <label for="phoneNo">Phone No</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter Mobile"
+              name="phoneNo"
+              [(ngModel)]="getMobile"
+            />
+          </div>
+          <p>{{ getdatamsg }}</p>
+          <button
+            type="submit"
+            class="btn btn-primary m-2"
+            (click)="DuplicatesendRequest()"
+          >
+            submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Show Duplicate Data-->
+
+<div class="container" *ngIf="isshow">
+  <h1 class="lead">accpeted duplicate mAadhar card</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>aadharNo</th>
+        <th>Name</th>
+        <th>Dob</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of acceptedDuplicateData">
+        <td>{{ i.aadharNo }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.dob }}</td>
+        <td>{{ i.gender }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.mobile }}</td>
+        <td>{{ i.address }}</td>
+
+        <td>
+          <button
+            type="button"
+            class="btn btn-info m-2"
+            (click)="duplicateCloseItem()"
+          >
+            close
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
