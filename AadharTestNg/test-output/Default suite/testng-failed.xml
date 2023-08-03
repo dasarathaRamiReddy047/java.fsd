@@ -5,7 +5,7 @@
     <classes>
       <class name="com.LoginAndRegistrationTest">
         <methods>
-          <include name="testValidLogin"/>
+          <include name="testNewAadharCardApplication"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

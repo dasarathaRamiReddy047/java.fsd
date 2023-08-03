@@ -1,65 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-03T00:05:35 IST" name="Default suite" finished-at="2023-08-03T00:06:20 IST" duration-ms="45485">
+  <suite started-at="2023-08-03T15:03:38 IST" name="Default suite" finished-at="2023-08-03T15:04:57 IST" duration-ms="79047">
     <groups>
     </groups>
-    <test started-at="2023-08-03T00:05:35 IST" name="Default test" finished-at="2023-08-03T00:06:20 IST" duration-ms="45485">
+    <test started-at="2023-08-03T15:03:38 IST" name="Default test" finished-at="2023-08-03T15:04:57 IST" duration-ms="79047">
       <class name="com.LoginAndRegistrationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:35 IST" name="setUp" finished-at="2023-08-03T00:05:38 IST" duration-ms="3482" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:03:38 IST" name="setUp" finished-at="2023-08-03T15:03:52 IST" duration-ms="14378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:38 IST" name="setUp" finished-at="2023-08-03T00:05:40 IST" duration-ms="1770" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:03:52 IST" name="setUp" finished-at="2023-08-03T15:04:02 IST" duration-ms="9713" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Launch()[pri:1, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:40 IST" name="Launch" finished-at="2023-08-03T00:05:43 IST" duration-ms="2766" status="PASS">
+        <test-method signature="Launch()[pri:1, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:02 IST" name="Launch" finished-at="2023-08-03T15:04:06 IST" duration-ms="3867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Launch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:43 IST" name="tearDown" finished-at="2023-08-03T00:05:43 IST" duration-ms="287" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:06 IST" name="tearDown" finished-at="2023-08-03T15:04:08 IST" duration-ms="2590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:43 IST" name="setUp" finished-at="2023-08-03T00:05:45 IST" duration-ms="2397" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:08 IST" name="setUp" finished-at="2023-08-03T15:04:14 IST" duration-ms="5346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidLogin()[pri:2, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:45 IST" name="testValidLogin" finished-at="2023-08-03T00:05:50 IST" duration-ms="4065" status="PASS">
+        <test-method signature="testValidLogin()[pri:2, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:14 IST" name="testValidLogin" finished-at="2023-08-03T15:04:23 IST" duration-ms="9319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:50 IST" name="tearDown" finished-at="2023-08-03T00:05:50 IST" duration-ms="281" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:23 IST" name="tearDown" finished-at="2023-08-03T15:04:35 IST" duration-ms="12117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:50 IST" name="setUp" finished-at="2023-08-03T00:05:52 IST" duration-ms="1857" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:35 IST" name="setUp" finished-at="2023-08-03T15:04:45 IST" duration-ms="9743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidRegistration()[pri:3, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:05:52 IST" name="testValidRegistration" finished-at="2023-08-03T00:06:07 IST" duration-ms="15478" status="PASS">
+        <test-method signature="testValidRegistration()[pri:3, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:45 IST" name="testValidRegistration" finished-at="2023-08-03T15:04:55 IST" duration-ms="10482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:06:07 IST" name="tearDown" finished-at="2023-08-03T00:06:08 IST" duration-ms="435" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:56 IST" name="tearDown" finished-at="2023-08-03T15:04:57 IST" duration-ms="1292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:06:08 IST" name="setUp" finished-at="2023-08-03T00:06:09 IST" duration-ms="1863" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testNewAadharCardApplication()[pri:4, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:06:09 IST" name="testNewAadharCardApplication" finished-at="2023-08-03T00:06:20 IST" duration-ms="10345" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNewAadharCardApplication -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:06:20 IST" name="tearDown" finished-at="2023-08-03T00:06:20 IST" duration-ms="378" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@74235045]" started-at="2023-08-03T00:06:20 IST" name="tearDown" finished-at="2023-08-03T00:06:20 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.LoginAndRegistrationTest@765d7657]" started-at="2023-08-03T15:04:57 IST" name="tearDown" finished-at="2023-08-03T15:04:57 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
